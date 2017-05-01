@@ -1,0 +1,30 @@
+﻿@model IEnumerable<SuperSupremeMegaStore.ViewModels.PurchaseDateGroup>
+
+@{
+    ViewBag.Title = "Purchase Date Statistics";
+}
+
+<h2>Purchase Date Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Purchase Date
+        </th>
+        <th>
+            Customers
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PurchaseDateInfo)
+            </td>
+            <td>
+                @item.PurchaseCount
+            </td>
+        </tr>
+    }
+</table>
